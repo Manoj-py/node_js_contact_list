@@ -1,0 +1,23 @@
+* {
+  text-align: center;
+  list-style-type: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.list-items {
+  background-color: chocolate;
+  border-radius: 25px;
+}
+.list-items:hover {
+  background-color: antiquewhite;
+}
+.list-items > li {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+.list-items > li > p {
+  margin-right: 20px;
+}

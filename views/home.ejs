@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="/css/home.css" />
+  </head>
+  <body>
+    <h1>Contact List</h1>
+
+    <ul>
+      <% for(i of contact_list){%>
+      <div class="list-items">
+        <li>
+          <p><%=i.name%></p>
+          <p><%=i.number%></p>
+          <a href="/delete-contact/?id=<%= i.id %>">Delete</a>
+        </li>
+      </div>
+      <%}%>
+    </ul>
+
+    <form method="post" action="/create-contact">
+      <input type="text" name="name" placeholder="Enter Your name" required />
+      <input
+        type="text"
+        name="number"
+        placeholder="Enter Your number"
+        required
+      />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script type="text/javascript" src="/js/home.js"></script>
+  </body>
+</html>
